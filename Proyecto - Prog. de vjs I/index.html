@@ -1,39 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="utils.js"></script>
 
-    <!-- Le ponemos un titulo -->
-    <title>The Devil's Herd</title>
+    <script src="https://pixijs.download/v8.3.4/pixi.min.js"></script>
 
-    <!-- Cargamos la libreria de pixi -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js"></script>
-    <script>
-      let app;
-      window.onload = function () {
-        app = new PIXI.Application({
-          width: 3000,
-          height: 1800,
-        });
+    <script src="persona.js"></script>
 
-        document.body.appendChild(app.view);
-
-        //Agregamos un fondo al canvas
-        const background = PIXI.Sprite.from('images/fondo-pasto.png');
-        background.width = app.screen.width;
-        background.height = app.screen.height;
-
-        app.stage.addChild(background);
-
-        //Agregamos un sprite para el personaje principal
-        const granjera = PIXI.Sprite.from('images/player.png');
-        granjera.x = app.screen.width / 2;
-        granjera.y = app.screen.height / 2;
-        granjera.anchor.set(0.5);
-        app.stage.addChild(granjera)
-      };
-    </script>
+    <script src="juego.js"></script>
   </head>
-  <body></body>
+
+  <body>
+    <script>
+      console.log("empieza de cero", performance.now());
+
+      const objetoJuego = new Juego();
+    </script>
+  </body>
 </html>
